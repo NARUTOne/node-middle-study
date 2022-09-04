@@ -1,9 +1,9 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 branch="$(git rev-parse --abbrev-ref HEAD)"
 
-if [ "$branch" = "master" ]; then
-  echo "Push to master branch is forbidden."
+if [ "$branch" = "main" ]; then
+  echo "Push to main branch is forbidden."
   echo "Checkout your owne branch then submit a pr."
   exit 1
 fi

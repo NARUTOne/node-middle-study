@@ -6,9 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint --fix --ext .js src",
-    "prettier": "prettier --write **/*.{js,ts,md,json}",
+    "prettier": "prettier --write **/*.{js,md,json}",
     "prepare": "is-ci || husky install configs/husky-config",
-    "precommit": "npm run lint-staged"
+    "precommit": "npx lint-staged"
   },
   "repository": {
     "type": "git",
@@ -31,7 +31,7 @@
     "npm": ">=7.0.0"
   },
   "lint-staged": {
-    "**/*.{js,ts,md,json}": [
+    "**/*.{js,md,json}": [
       "npm run prettier"
     ]
   },

@@ -5,4 +5,3 @@
 # mac 执行被禁止，运行 chmod +x configs/husky-config/pre-commit
 
 npx devmoji -e --lint
-
