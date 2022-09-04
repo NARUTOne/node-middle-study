@@ -1,1 +1,1 @@
-console.log('node-middle')
+console.log('node-middle');
