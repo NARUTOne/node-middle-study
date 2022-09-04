@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+. "$(dirname "$0")/common.sh"
+
+# mac 执行被禁止，运行 chmod +x configs/husky-config/pre-commit
+
+npm run devmoji -e --lint
+

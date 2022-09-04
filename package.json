@@ -1,0 +1,85 @@
+{
+  "name": "middle-demo",
+  "version": "1.0.0",
+  "description": "> node 中间层学习demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --fix --ext .js src",
+    "prettier": "prettier --write **/*.{js,ts,jsx,tsx,md,json}",
+    "prepare": "is-ci || husky install configs/husky-config",
+    "precommit": "npm run lint-staged"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NARUTOne/node-middle-study.git"
+  },
+  "keywords": [
+    "node",
+    "koa",
+    "koa2",
+    "middle"
+  ],
+  "author": "NARUTOne",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NARUTOne/node-middle-study/issues"
+  },
+  "homepage": "https://github.com/NARUTOne/node-middle-study#readme",
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=7.0.0"
+  },
+  "lint-staged": {
+    "**/*.{js,ts,md,json}": [
+      "npm run prettier"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "type-enum": [
+        2,
+        "always",
+        [
+          "feat",
+          "fix",
+          "style",
+          "build",
+          "pref",
+          "test",
+          "docs",
+          "refactor",
+          "revert",
+          "chore"
+        ]
+      ],
+      "body-max-line-length": [
+        2,
+        "always",
+        300
+      ],
+      "footer-max-line-length": [
+        2,
+        "always",
+        300
+      ]
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "devmoji": "^2.3.0",
+    "eslint": "^8.23.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.1",
+    "is-ci": "^3.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1"
+  }
+}
